@@ -1,3 +1,7 @@
+
+
+
+
 /**
  * Represents a node in a linked list. Each node points to a MemoryBlock object. 
  */
@@ -14,6 +18,15 @@ public class Node {
 	 */
 	public Node(MemoryBlock block) {
 		this.block = block;
+	}
+	public Node getNext(){
+		return this.next;
+	}
+
+	public Node(MemoryBlock block, Node next){
+		this.block = block;
+		this.next = next;
+
 	}
 	
 	/**
