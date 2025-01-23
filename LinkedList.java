@@ -32,15 +32,19 @@ public class LinkedList {
         Node newNode = new Node(block, null);
 
         if (size == 0) {
+            // First element in the list
             first = newNode;
             last = newNode;
         } else if (index == 0) {
+            // Add at the beginning
             newNode.next = first;
             first = newNode;
         } else if (index == size) {
+            // Add at the end
             last.next = newNode;
             last = newNode;
         } else {
+            // Add in the middle
             Node current = getNode(index - 1);
             newNode.next = current.next;
             current.next = newNode;
