@@ -166,7 +166,7 @@ public class LinkedList {
         Node current = first;
         int index = 0;
         while (current != null){
-            if(current.block.equals(block)){
+            if(current.block.equals(block)){ //checks if we found it
                 return index;
             }
             current = current.next;  
@@ -236,11 +236,11 @@ public class LinkedList {
 			return;
         }
         Node current = first;
-        for (int i = 0; i < index - 1; i++) {
+        for (int i = 0; i < index - 1 ; i++) { 
 	        current = current.next;  
         }
 		current.next = current.next.next;
-		if (current.next == null) {
+		if (current.next == null) { //checks if its the last one and updating if it is 
 			last = current;
 		}
 		size--;
@@ -261,7 +261,7 @@ public class LinkedList {
 		if (first == null) {
 			return;
 		}
-        if(first.block.equals(block)){
+        if(first.block.equals(block)){ 
             first = first.next;
             if(first == null){
                 last = null;
@@ -298,13 +298,13 @@ public class LinkedList {
      * A textual representation of this list, for debugging.
      */
     public String toString() {
-        String listText = "";
+        String result = "";
         Node current = first;
         while (current != null){
-            listText += current.block + " ";
+            result += current.block + " ";
             current = current.next;
         }
-        return listText;
+        return result;
     }
 }
 
