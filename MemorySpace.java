@@ -122,8 +122,8 @@ public class MemorySpace {
 			return;
 		}
 		sortFreeList();
-		int i = 0;
-		while (i != freeList.getSize() - 1) {
+		int X = 0;
+		while ( X != freeList.getSize() - 1 ) {
 			MemoryBlock currentBlock = freeList.getBlock(i);
 			MemoryBlock nextBlock = freeList.getBlock(i + 1);
 			if (currentBlock.baseAddress + currentBlock.length == nextBlock.baseAddress) {
@@ -131,7 +131,7 @@ public class MemorySpace {
 				freeList.remove(nextBlock);
 			} 
 			else {
-				i++;
+				X++;
 			}
 		}
 	}
